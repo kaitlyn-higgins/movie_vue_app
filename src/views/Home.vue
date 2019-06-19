@@ -1,6 +1,11 @@
 <template>
   <div class="home">
 
+    <ul>
+      <li v-for="error in errors">{{ error }}</li>
+    </ul>
+
+
     <h2>Add New Actor</h2>
     <div>
       First Name: <input type="text" v-model="newActorFirstName"><br>
@@ -48,6 +53,7 @@ export default {
     return {
       message: "Actors",
       actors: [],
+      errors: [],
       newActorFirstName: "",
       newActorLastName: "",
       newActorKnownFor: "",
@@ -81,6 +87,8 @@ export default {
         this.newActorGender = "";
         this.newActorAge = "";
         this.newActorMovieId = "";
+      }).catch(error => {
+        this.errors = error.response.data.errors;
       });
     },
     showActor: function(actor) {
@@ -93,7 +101,7 @@ export default {
     updateActor: function(actor) {
       var params = {
         first_name: actor.first_name,
-        width: actor.last_name,
+        last_name: actor.last_name,
         known_for: actor.known_for,
         gender: actor.gender,
         age: actor.age,
@@ -101,6 +109,8 @@ export default {
       };
       axios.patch("/api/actors/" + actor.id, params).then(response => {
         this.currentActor = {};
+      }).catch(error => {
+        this.errors = error.response.data.errors;
       });
     },
     destroyActor: function(actor) {
