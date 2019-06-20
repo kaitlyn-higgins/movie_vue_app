@@ -1,6 +1,29 @@
 <template>
   <div class="home">
 
+
+
+    <!-- Home Section -->
+
+    <section id="home" class="main-home parallax-section">
+         <div class="overlay"></div>
+         <div id="particles-js"></div>
+         <div class="container">
+              <div class="row">
+
+                   <div class="col-md-12 col-sm-12">
+                        <h1>Welcome!</h1>
+                        <h4>We've got mad info about movies...</h4>
+                        <router-link to="/movies-index" class="smoothScroll btn btn-default">Browse Movies </router-link>
+                        <router-link to="/actors-index" class="smoothScroll btn btn-default">Browse Actors </router-link>
+                   </div>
+
+              </div>
+         </div>
+    </section>
+
+
+
     <ul>
       <li v-for="error in errors">{{ error }}</li>
     </ul>
@@ -17,7 +40,7 @@
       <button v-on:click="createActor()">Create Actor</button>
     </div> -->
 
-    <h1>{{ message }}</h1>
+<!--     <h1>{{ message }}</h1>
     <div v-for="actor in actors">
       <h2>{{ actor.first_name }} {{ actor.last_name }}</h2>
       <button v-on:click="showActor(actor)">See More</button>
@@ -38,7 +61,7 @@
       </div>
 
       </div>
-    </div>
+    </div> -->
 
   </div>
 </template>

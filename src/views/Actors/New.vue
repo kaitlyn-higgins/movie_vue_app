@@ -5,9 +5,44 @@
       <li v-for="error in errors">{{ error }}</li>
     </ul>
 
-    <h1>Add New Actor</h1>
+    <section id="contact">
+         <div class="container">
+              <div class="row">
+
+                   <div class="col-md-offset-1 col-md-10 col-sm-12">
+                        <h2>Add a new actor</h2>
+                        <p>Tell us all about your favorite actor or actress!</p>
+
+                        <form v-on:submit.prevent="submit()" action="#" method="post">
+                             <div class="col-md-4 col-sm-4">
+                                  <input name="name" type="text" class="form-control" id="name" placeholder="First Name" v-model="newActorFirstName">
+                             </div>
+                             <div class="col-md-4 col-sm-4">
+                                  <input name="name" type="text" class="form-control" id="name" placeholder="Last Name" v-model="newActorLastName">
+                             </div>                             <div class="col-md-4 col-sm-4">
+                                  <input name="name" type="text" class="form-control" id="name" placeholder="Known For" v-model="newActorKnownFor">
+                             </div>                             <div class="col-md-4 col-sm-4">
+                                  <input name="name" type="text" class="form-control" id="name" placeholder="Gender" v-model="newActorGender">
+                             </div>                             <div class="col-md-4 col-sm-4">
+                                  <input name="name" type="number" class="form-control" id="name" placeholder="Age" v-model="newActorAge">
+                             </div>                             <div class="col-md-4 col-sm-4">
+                                  <input name="name" type="number" class="form-control" id="name" placeholder="Movie Id" v-model="newActorMovieId">
+                             </div>
+                             <div class="col-md-3 col-sm-6">
+                                  <input name="submit" type="submit" class="form-control" id="submit" value="Create">
+                             </div>
+                        </form>
+                   </div>
+
+              </div>
+         </div>
+    </section>
 
 
+
+<!--     <h1>Add New Actor</h1>
+ -->
+<!-- 
     <form v-on:submit.prevent="submit()">
           
           <div>
@@ -18,7 +53,7 @@
                Age: <input type="number" v-model="newActorAge"><br>
                Movie Id: <input type="number" v-model="newActorMovieId"><br>
              </div>
-<!--             <label for="firstName">First Name</label>
+            <label for="firstName">First Name</label>
             <input type="text" id="firstName" placeholder="Jake" v-model="newActorFirstName">
             <label for="lastName">Last Name</label>
             <input type="text" id="lastName" placeholder="Johnson" v-model="newActorLastName">
@@ -27,9 +62,9 @@
             <label for="gender">Gender</label>
             <input type="text" id="gender" placeholder="M" v-model="newActorGender">
             <label for="age">Age</label>
-            <input type="number" id="age" placeholder="41" v-model="newActorAge"> -->
+            <input type="number" id="age" placeholder="41" v-model="newActorAge">
           <button type="submit">Create Actor</button>
-        </form>
+        </form> -->
 
 
 <!--     <div>

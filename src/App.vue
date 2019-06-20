@@ -1,6 +1,14 @@
 <template>
   <div id="app">
 
+    <!-- PRE LOADER -->
+
+    <div class="preloader">
+         <div class="sk-spinner sk-spinner-wordpress">
+              <span class="sk-inner-circle"></span>
+         </div>
+    </div>
+
     <div class="navbar navbar-default navbar-static-top" role="navigation">
          <div class="container">
 
@@ -10,7 +18,8 @@
                         <span class="icon icon-bar"></span>
                         <span class="icon icon-bar"></span>
                    </button>
-                   <a href="index.html" class="navbar-brand">Mad Movies</a>
+<!--                    <router-link to="/movies-index">All Movies </router-link>
+ -->                   <a href="/" class="navbar-brand">Mad Movies</a>
               </div>
               <div class="collapse navbar-collapse">
                    <ul class="nav navbar-nav navbar-right">
@@ -41,18 +50,18 @@
               <div class="row">
 
                    <div class="col-md-5 col-md-offset-1 col-sm-6">
-                        <h3>Neuron Studio</h3>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                        <h3>Mad Movies</h3>
+                        <p>Mad Movies Inc. is an affilliate of someone, somewhere. If our info isn't correct, send us an email! </p>
                         <div class="footer-copyright">
-                             <p>Copyright &copy; 2017 Your Company - Design: Tooplate</p>
+                             <p>Copyright &copy; 2019 Mad Movies Inc.</p>
                         </div>
                    </div>
 
                    <div class="col-md-4 col-md-offset-1 col-sm-6">
-                        <h3>Talk to us</h3>
+                        <h3>Talk to us! We're Hiring!</h3>
                         <p><i class="fa fa-globe"></i> 512 Delicious Street, San Francisco, CA 10880</p>
                         <p><i class="fa fa-phone"></i> 010-020-0990</p>
-                        <p><i class="fa fa-save"></i> info@company.com</p>
+                        <p><i class="fa fa-save"></i> info@madMovies.com</p>
                    </div>
 
                    <div class="clearfix col-md-12 col-sm-12">
