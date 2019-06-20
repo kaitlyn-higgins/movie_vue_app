@@ -6,6 +6,10 @@ import MoviesIndex from './views/MoviesIndex.vue';
 import MoviesNew from './views/MoviesNew.vue';
 import MoviesShow from './views/MoviesShow.vue';
 import MoviesEdit from './views/MoviesEdit.vue';
+import ActorsIndex from './views/Actors/Index.vue';
+import ActorsShow from './views/Actors/Show.vue';
+import ActorsEdit from './views/Actors/Edit.vue';
+import ActorsNew from './views/Actors/New.vue';
 
 Vue.use(Router);
 
@@ -50,6 +54,27 @@ export default new Router({
       path: '/movies/:id/edit',
       name: 'movies-edit',
       component: MoviesEdit
-    }
+    },
+    {
+      path: '/actors-index',
+      name: 'actors-index',
+      component: ActorsIndex
+    },
+    {
+      path: '/actors/new',
+      name: 'actors-new',
+      component: ActorsNew
+    },
+    {
+      path: '/actors/:id',
+      name: 'actors-show',
+      component: ActorsShow
+    },
+    {
+      path: '/actors/:id/edit',
+      name: 'actors-edit',
+      component: ActorsEdit
+    },
+
   ]
 });

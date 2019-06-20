@@ -5,7 +5,7 @@
       <li v-for="error in errors">{{ error }}</li>
     </ul>
 
-
+<!-- 
     <h2>Add New Actor</h2>
     <div>
       First Name: <input type="text" v-model="newActorFirstName"><br>
@@ -15,7 +15,7 @@
       Age: <input type="text" v-model="newActorAge"><br>
       Movie Id: <input type="number" v-model="newActorMovieId"><br>
       <button v-on:click="createActor()">Create Actor</button>
-    </div>
+    </div> -->
 
     <h1>{{ message }}</h1>
     <div v-for="actor in actors">
@@ -54,12 +54,12 @@ export default {
       message: "Actors",
       actors: [],
       errors: [],
-      newActorFirstName: "",
-      newActorLastName: "",
-      newActorKnownFor: "",
-      newActorGender: "",
-      newActorAge: "",
-      newActorMovieId: "",
+      // newActorFirstName: "",
+      // newActorLastName: "",
+      // newActorKnownFor: "",
+      // newActorGender: "",
+      // newActorAge: "",
+      // newActorMovieId: "",
       currentActor: {}
     };
   },
@@ -69,28 +69,28 @@ export default {
     });
   },
   methods: {
-    createActor: function() {
-      var params = {
-        first_name: this.newActorFirstName,
-        last_name: this.newActorLastName,
-        known_for: this.newActorKnownFor,
-        gender: this.newActorGender,
-        age: this.newActorAge,
-        movie_id: this.newActorMovieId
-      };
-      axios.post("/api/actors", params).then(response => {
-        console.log(response);
-        this.actors.push(response.data);
-        this.newActorFirstName = "";
-        this.newActorLastName = "";
-        this.newActorKnownFor = "";
-        this.newActorGender = "";
-        this.newActorAge = "";
-        this.newActorMovieId = "";
-      }).catch(error => {
-        this.errors = error.response.data.errors;
-      });
-    },
+    // createActor: function() {
+    //   var params = {
+    //     first_name: this.newActorFirstName,
+    //     last_name: this.newActorLastName,
+    //     known_for: this.newActorKnownFor,
+    //     gender: this.newActorGender,
+    //     age: this.newActorAge,
+    //     movie_id: this.newActorMovieId
+    //   };
+    //   axios.post("/api/actors", params).then(response => {
+    //     console.log(response);
+    //     this.actors.push(response.data);
+    //     this.newActorFirstName = "";
+    //     this.newActorLastName = "";
+    //     this.newActorKnownFor = "";
+    //     this.newActorGender = "";
+    //     this.newActorAge = "";
+    //     this.newActorMovieId = "";
+    //   }).catch(error => {
+    //     this.errors = error.response.data.errors;
+    //   });
+    // },
     showActor: function(actor) {
       if (this.currentActor === actor) {
         this.currentActor = {};
