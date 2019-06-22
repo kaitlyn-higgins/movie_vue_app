@@ -10,6 +10,9 @@ import ActorsIndex from './views/Actors/Index.vue';
 import ActorsShow from './views/Actors/Show.vue';
 import ActorsEdit from './views/Actors/Edit.vue';
 import ActorsNew from './views/Actors/New.vue';
+import Signup from "./views/Users/Signup.vue";
+import Login from "./views/Users/Login.vue";
+import Logout from "./views/Users/Logout.vue";
 
 Vue.use(Router);
 
@@ -75,6 +78,20 @@ export default new Router({
       name: 'actors-edit',
       component: ActorsEdit
     },
-
+    {
+      path: "/signup",
+      name: "signup",
+      component: Signup
+    },
+    {
+      path: "/login",
+      name: "login",
+      component: Login
+    },
+    {
+      path: "/logout",
+      name: "logout",
+      component: Logout
+    }
   ]
 });

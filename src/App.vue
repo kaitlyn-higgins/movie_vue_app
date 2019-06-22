@@ -28,6 +28,16 @@
                         <li><router-link to="/movies/new">Add a New Movie</router-link></li>
                         <li><router-link to="/actors-index">Actors </router-link></li>
                         <li><router-link to="/actors/new">Add a New Actor </router-link></li>
+                        <li v-if="isLoggedIn()">
+                          <router-link to="/logout">Logout</router-link>
+                        </li>
+                        <li v-else>
+                          <router-link to="/signup">Signup</router-link>
+                          <router-link to="/login">Login</router-link>
+                        </li>
+<!--                         <li><router-link to="/signup">Signup</router-link></li>
+                        <li><router-link to="/login">Login</router-link></li>
+                        <li><router-link to="/logout">Logout</router-link></li> -->
                    </ul>
               </div>
 
@@ -90,3 +100,19 @@
 <style>
 
 </style>
+
+<script>
+export default {
+  created: function() {
+  },
+  methods: {
+    isLoggedIn: function() {
+      if (localStorage.getItem('jwt')) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
+};
+</script>
